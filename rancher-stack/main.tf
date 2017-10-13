@@ -12,8 +12,8 @@ provider "rancher" {
 
 resource "rancher_environment" "default" {
   name = "DigitalOcean"
-  description = "The Default environment"
-  orchestration = "cattle"
+  description = "DigitalOcean environment"
+  orchestration = "${var.orchestration}"
 }
 
 resource "rancher_registration_token" "default" {

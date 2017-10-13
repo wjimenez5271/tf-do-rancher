@@ -1,0 +1,3 @@
+variable "orchestration" {
+  default = "cattle"
+}
