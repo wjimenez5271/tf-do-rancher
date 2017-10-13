@@ -11,7 +11,7 @@ provider "rancher" {
 }
 
 resource "rancher_environment" "default" {
-  name = "env1"
+  name = "Default"
   description = "The Default environment"
   orchestration = "cattle"
 }
