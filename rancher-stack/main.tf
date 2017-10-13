@@ -11,7 +11,7 @@ provider "rancher" {
 }
 
 resource "rancher_environment" "default" {
-  name = "Default"
+  name = "DigitalOcean"
   description = "The Default environment"
   orchestration = "cattle"
 }
