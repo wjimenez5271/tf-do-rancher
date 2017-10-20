@@ -21,7 +21,7 @@ make teardown
 
 Assumes you have the following terraform variables defined:
 
-- `ssh_keys` - Digtial Ocean SSH Key ID to set for the droplet. One way to get this ID is to use [https://github.com/digitalocean/doctl](doctl) like so: `doctl compute ssh-key list | grep $keyname`
+- `ssh_keys` - Digtial Ocean SSH Key ID to set for the droplet. One way to get this ID is to use [doctl](https://github.com/digitalocean/doctl) like so: `doctl compute ssh-key list | grep $keyname`
 - `digitalocean_token` - [Digital Ocean Auth Token](https://www.terraform.io/docs/providers/do/index.html#token) for use by Terraform .
 - `rancher_version_tag` (optional) - Version of rancher to use (e.g. `stable`, `latest`)
 - `orchestration` (optional) - Orchestrator (e.g. `cattle`, `kubernetes`)
