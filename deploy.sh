@@ -1,7 +1,10 @@
  #!/usr/bin/env bash
 BASEDIR=${PWD}
 c=0
-sleeptime=30
+if [ -z "$SLEEPTIME" ]
+then
+    SLEEPTIME=30
+fi
 
 echo "\n------\nApplying Rancher server TF plan\n"
 cd ${BASEDIR}/server && terraform apply
@@ -11,8 +14,8 @@ until [ $c -ge 7 ]
 do
    cd ${BASEDIR}/rancher-stack && terraform apply && break
    c=$(($c+1))
-   echo "\n------\nTerraform apply of Rancher Stack failed, probably still waiting for server to be ready. Sleeping "${sleeptime}"\n"
-   sleep ${sleeptime}
+   echo "\n------\nTerraform apply of Rancher Stack failed, probably still waiting for server to be ready. Sleeping "${SLEEPTIME}"\n"
+   sleep ${SLEEPTIME}
 done
 echo "\n------\nApplying node TF plan\n"
 cd ${BASEDIR}/nodes && terraform apply

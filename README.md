@@ -21,9 +21,13 @@ make teardown
 
 Assumes you have the following terraform variables defined:
 
-- `ssh_keys`
-- `digitalocean_token`
-- `rancher_version_tag` (optional)
-- `orchestration` (optional)
+- `ssh_keys` - Digtial Ocean SSH Key ID to set for the droplet. One way to get this ID is to use [https://github.com/digitalocean/doctl](doctl) like so: `doctl compute ssh-key list | grep $keyname`
+- `digitalocean_token` - [Digital Ocean Auth Token](https://www.terraform.io/docs/providers/do/index.html#token) for use by Terraform .
+- `rancher_version_tag` (optional) - Version of rancher to use (e.g. `stable`, `latest`)
+- `orchestration` (optional) - Orchestrator (e.g. `cattle`, `kubernetes`)
+
+Additionally you can set the following Bash variables:
+
+- `SLEEPTIME` - interval to sleep between polling attempts while waiting for the server (first node) to become ready
 
 Find the IP of the droplet/node named `rancher-server-0` and go to `http://<ipv4_address>:8080` to get to the Rancher UI. The rancher-nodes will be in the environment called `DigitalOcean`
