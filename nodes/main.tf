@@ -23,5 +23,5 @@ module "digital-ocean" {
   digitalocean_token = "${var.digitalocean_token}"
   docker_cmd = "${data.terraform_remote_state.rancher-stack.registration-token}"
   ssh_keys = "${var.ssh_keys}"
-  instance_type = "nodes"
+  instance_type = "node"
 }

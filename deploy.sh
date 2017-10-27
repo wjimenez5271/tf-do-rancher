@@ -7,7 +7,7 @@ then
 fi
 
 echo "\n------\nApplying Rancher server TF plan\n"
-cd ${BASEDIR}/server && terraform apply
+cd ${BASEDIR}/server && terraform apply || exit 1
 
 echo "\n------\nApplying Rancher stack TF plan\n"
 until [ $c -ge 7 ]
