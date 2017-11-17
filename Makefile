@@ -6,3 +6,6 @@ deploy:
 
 teardown:
 	./teardown.sh
+
+init:
+	cd server && terraform init && cd ../nodes && terraform init && cd ../
