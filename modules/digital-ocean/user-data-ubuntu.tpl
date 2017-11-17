@@ -9,7 +9,7 @@ hostnamectl set-hostname $node_hostname
 echo "127.0.0.1  $node_hostname" >> /etc/hosts
 
 # Setup Docker + Rancher
-apt-get update && apt -y install docker.io=1.12.6-0ubuntu1~16.04.1 ntp
+apt-get update && apt -y install docker.io=1.13.1-0ubuntu1~16.04.2 ntp
 echo "attempting to run: "
 echo "${docker_cmd}"
 ${docker_cmd}
