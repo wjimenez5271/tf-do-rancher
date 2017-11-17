@@ -2,10 +2,10 @@
 default: deploy ;
 
 deploy:
-	./deploy.sh
+	./scripts/deploy.sh
 
 teardown:
-	./teardown.sh
+	./scripts/teardown.sh
 
 init:
 	cd server && terraform init && cd ../nodes && terraform init && cd ../
