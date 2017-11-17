@@ -9,3 +9,6 @@ teardown:
 
 init:
 	cd server && terraform init && cd ../nodes && terraform init && cd ../
+
+plan:
+	cd server && terraform plan && cd ../nodes && terraform plan && cd ../
