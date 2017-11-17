@@ -28,6 +28,6 @@ Assumes you have the following terraform variables defined:
 
 Additionally you can set the following Bash variables:
 
-- `SLEEPTIME` - interval to sleep between polling attempts while waiting for the server (first node) to become ready
+- `SLEEPTIME` - interval to sleep between polling attempts while waiting for the Rancher server (first node) to become ready. Script will initially wait 45 seconds before first polling attempt.
 
 Find the IP of the droplet/node named `rancher-server-0` and go to `http://<ipv4_address>:8080` to get to the Rancher UI. The rancher-nodes will be in the environment called `DigitalOcean`
