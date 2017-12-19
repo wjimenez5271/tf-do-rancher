@@ -27,5 +27,5 @@ resource "digitalocean_droplet" "rancher_instance" {
 
 
 output "server-ip" {
-  value = "${digitalocean_droplet.rancher_instance.ipv4_address}"
+  value = "${digitalocean_droplet.rancher_instance.*.ipv4_address[0]}"
 }
