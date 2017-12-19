@@ -4,7 +4,7 @@ This is a attempt to provide a 'single click' deployment of [Rancher](http://ran
 
 #### Requirements
 
-- [https://www.terraform.io/](Terraform) (version 0.10 or higher)
+- [Terraform](https://www.terraform.io/) (version 0.10 or higher)
 - Human (to push the button)
 
 #### Usage
